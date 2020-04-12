@@ -7,3 +7,4 @@ This is how to use the Postman Collection
 5. Select Environment
 6. Import shipnodes.csv file to create ship nodes
 7. Import products.csv file to create relationships
+![alt text](/collection_checkVariables.PNG "")
