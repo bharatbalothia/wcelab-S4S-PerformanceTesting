@@ -1,0 +1,152 @@
+[
+{
+        "shipNode": "KC::DALLAS",
+        "latitude": 32.7767,
+        "longitude": -96.797
+    },
+{
+        "shipNode": "KC::FAIRFIELD",
+        "latitude": 38.2577781,
+        "longitude": -122.054169
+    },
+{
+        "shipNode": "KC::LOSANGELES",
+        "latitude": 34.11,
+        "longitude": -118.41
+    },
+{
+        "shipNode": "KC::SANFRANCISCO",
+        "latitude": 37.76,
+        "longitude": -122.69
+    },
+{
+        "shipNode": "KC::VISTA",
+        "latitude": 33.193611,
+        "longitude": -117.241112
+    },
+{
+        "shipNode": "KC::SANJOSE",
+        "latitude": 37.3,
+        "longitude": -121.85
+    },
+{
+        "shipNode": "3M::Decatur",
+        "latitude": 34.6422621,
+        "longitude": -87.0473635
+    },
+{
+        "shipNode": "3M::Guin",
+        "latitude": 33.9674381,
+        "longitude": -87.9014713
+    },
+{
+        "shipNode": "3M::Little Rock",
+        "latitude": 34.707139,
+        "longitude": -92.2448031
+    },
+{
+        "shipNode": "3M::Corona",
+        "latitude": 33.8461148,
+        "longitude": -117.5135497
+    },
+{
+        "shipNode": "3M::Irvine",
+        "latitude": 33.6926525,
+        "longitude": -117.8450948
+    },
+{
+        "shipNode": "3M::Monrovia",
+        "latitude": 33.912692,
+        "longitude": -118.2031029
+    },
+{
+        "shipNode": "3M::Northridge",
+        "latitude": 34.233492,
+        "longitude": -118.5699846
+    },
+{
+        "shipNode": "3M::Newark",
+        "latitude": 39.9320396,
+        "longitude": -75.7005464
+    },
+{
+        "shipNode": "3M::Cordova",
+        "latitude": 41.7520093,
+        "longitude": -90.2893936
+    },
+{
+        "shipNode": "3M::DeKalb",
+        "latitude": 41.9038735,
+        "longitude": -88.7541753
+    },
+{
+        "shipNode": "3M::Hartford City",
+        "latitude": 40.445837,
+        "longitude": -85.3586753
+    },
+{
+        "shipNode": "3M::Indianapolis",
+        "latitude": 39.8961877,
+        "longitude": -86.2577368
+    },
+{
+        "shipNode": "3M::Ames",
+        "latitude": 42.0296479,
+        "longitude": -93.5811265
+    },
+{
+        "shipNode": "3M::Knoxville",
+        "latitude": 41.3199819,
+        "longitude": -93.0672318
+    },
+{
+        "shipNode": "3M::Cynthiana",
+        "latitude": 38.3736534,
+        "longitude": -84.2967138
+    },
+{
+        "shipNode": "3M::Chelmsford",
+        "latitude": 42.5945467,
+        "longitude": -71.3242059
+    },
+{
+        "shipNode": "3M::Columbia",
+        "latitude": 39.0097514,
+        "longitude": -92.2735209
+    },
+{
+        "shipNode": "CVS::NJ Lumberton",
+        "latitude": 39.9873935,
+        "longitude": -74.8517819
+    },
+{
+        "shipNode": "CVS::CA - La Habra",
+        "latitude": 34.0471555,
+        "longitude": -117.9695004
+    },
+{
+        "shipNode": "CVS::CA - Patterson",
+        "latitude": 37.4692705,
+        "longitude": -121.1600557
+    },
+{
+        "shipNode": "CVS::FL - Orlando",
+        "latitude": 28.4443035,
+        "longitude": -81.4132831
+    },
+{
+        "shipNode": "CVS::FL - Vero Beach",
+        "latitude": 27.6449214,
+        "longitude": -80.534098
+    },
+{
+        "shipNode": "CVS::IN - Indianapolis",
+        "latitude": 39.8006766,
+        "longitude": -86.0633881
+    },
+{
+        "shipNode": "CVS::RI - Woonsocket",
+        "latitude": 41.991592,
+        "longitude": -71.491217
+    }
+]
