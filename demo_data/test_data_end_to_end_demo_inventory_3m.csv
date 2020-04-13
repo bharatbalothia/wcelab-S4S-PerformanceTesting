@@ -1,6 +1,6 @@
 supplier id, customer id, location id, item id,product class, quantity,uom,available from
-3M,scbn_3,Ames,8110S,NEW,0,UNIT,1900-01-01T00:00:00
-3M,scbn_3,Ames,8210,NEW,1,UNIT,1900-01-01T00:00:00
+3M,scbn_3,Ames,8110S,NEW,4,UNIT,1900-01-01T00:00:00
+3M,scbn_3,Ames,8210,NEW,9,UNIT,1900-01-01T00:00:00
 3M,scbn_3,Ames,8511CN,NEW,0,UNIT,1900-01-01T00:00:00
 3M,scbn_3,Ames,8514,NEW,2,UNIT,1900-01-01T00:00:00
 3M,scbn_3,Ames,9211,NEW,1,UNIT,1900-01-01T00:00:00
