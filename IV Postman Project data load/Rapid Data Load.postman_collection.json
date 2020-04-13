@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "dd9fe558-ce92-442f-9306-31cc222587a2",
+		"name": "Rapid Data Load",
+		"description": "#IV Quick Start collection\n\nCheck the \"Variables\" tab of the collectiont to validate if those vairables are correct. ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 ShipNodes",
+			"item": [
+				{
+					"name": "ShipNode - Set",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken_configuration}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"latitude\": {{latitude}},\r\n\t\"longitude\": {{longitude}}\r\n}"
+						},
+						"url": {
+							"raw": "https://{{hostname}}/{{applicationName}}/{{tenantID}}/{{apiVersion}}/configuration/shipNodes/{{Supplier}}::{{location}}",
+							"protocol": "https",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{applicationName}}",
+								"{{tenantID}}",
+								"{{apiVersion}}",
+								"configuration",
+								"shipNodes",
+								"{{Supplier}}::{{location}}"
+							]
+						},
+						"description": "Add or Update a ShipNode\t"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "02 DistributionGroups",
+			"item": [
+				{
+					"name": "DistributionGroup - Set",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken_configuration}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"shipNodes\": [{\n\t\t\"shipNode\": \"latest_madrid_dc\"\n\t}]\n}"
+						},
+						"url": {
+							"raw": "https://{{hostname}}/{{applicationName}}/{{tenantID}}/{{apiVersion}}/configuration/distributionGroups/lauratest_dallas_dg",
+							"protocol": "https",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{applicationName}}",
+								"{{tenantID}}",
+								"{{apiVersion}}",
+								"configuration",
+								"distributionGroups",
+								"lauratest_dallas_dg"
+							]
+						},
+						"description": "DistributionGroup - Set"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "03 Relationship",
+			"item": [
+				{
+					"name": "update relationship",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken_configuration}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer tmeB61N5WyhWY41ErWw10xTwHY7PU3Fb"
+							}
+						],
+						"url": {
+							"raw": "https://{{hostname}}/{{applicationName}}/{{tenantID}}/{{apiVersion}}/configuration/items/{{Supplier}}::{{SupplierProduct}}/relationship/item_sku/{{DisplayProduct}}",
+							"protocol": "https",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{applicationName}}",
+								"{{tenantID}}",
+								"{{apiVersion}}",
+								"configuration",
+								"items",
+								"{{Supplier}}::{{SupplierProduct}}",
+								"relationship",
+								"item_sku",
+								"{{DisplayProduct}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "04 Supplies",
+			"item": [
+				{
+					"name": "putsupplies - sync supply",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearerToken_configuration}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer tmeB61N5WyhWY41ErWw10xTwHY7PU3Fb",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n                 \"supplies\": [\r\n\r\n{\r\n                        \"eta\": \"1900-01-01T00:00:00Z\",\r\n                        \"itemId\": \"{{Supplier}}::{{SupplierProduct}}\",\r\n                         \"quantity\":  {{qty}},\r\n                        \"shipByDate\": \"2500-01-01T00:00:00Z\",\r\n\t\t\t\t\t\t\"shipNode\": \"{{Supplier}}::{{location}}\" ,                        \r\n                        \"type\": \"ONHAND\",\r\n                        \"unitOfMeasure\": \"UNIT\" \r\n      }     ]\r\n}\r\n"
+						},
+						"url": {
+							"raw": "https://{{hostname}}/{{applicationName}}/{{tenantID}}/{{apiVersion}}/supplies",
+							"protocol": "https",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{applicationName}}",
+								"{{tenantID}}",
+								"{{apiVersion}}",
+								"supplies"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3433357e-b613-4e35-9216-5c66902f2197",
+				"type": "text/javascript",
+				"exec": [
+					"const TOKENEXPNAME = \"tokenExpirationTime\";",
+					"",
+					"",
+					"const hostname = pm.variables.get(\"hostname\");",
+					"const applicationName = pm.variables.get(\"applicationName\");",
+					"const tenantID = pm.variables.get(\"tenantID\");",
+					"const apiVersion = pm.variables.get(\"apiVersion\");",
+					"const clientID = pm.variables.get(\"client_id\");",
+					"const clientSecret = pm.variables.get(\"client_secret\");",
+					"const tokenUrlPostfix = pm.variables.get(\"tokenUrlPostfix\");",
+					"",
+					"// get token for an API and set the token value in the Environment variable as \"bearerToken_XYZ\"",
+					"function getAndSetApiToken(apiName) {",
+					"    // Construct the targetUrl from the collection variables",
+					"    const targetUrl = \"https://\" + hostname + \"/\" + applicationName + \"/\" + tenantID + \"/\" + apiVersion + \"/\" + apiName + \"/\" + tokenUrlPostfix;",
+					"    ",
+					"    // create the request",
+					"    const authRequest = {",
+					"        url: targetUrl,",
+					"        method: 'POST',",
+					"        header: {",
+					"            \"Content-Type\" : 'application/x-www-form-urlencoded',",
+					"            \"Authorization\" : 'Basic ' + btoa(clientID + \":\" + clientSecret)",
+					"        },",
+					"        body: {",
+					"            mode: 'raw',",
+					"            raw: 'grant_type=client_credentials'",
+					"        }};",
+					"    ",
+					"    // Send the request and use setTokenEnvironmentVariable to handle the response",
+					"    pm.sendRequest(authRequest, function (err, res) {",
+					"        if (err) {",
+					"            console.log(err);",
+					"            // Unset token expire time to allow getting new ones",
+					"            pm.environment.unset(TOKENEXPNAME);",
+					"            ",
+					"        } else {",
+					"            // Use the response to set the token",
+					"            setTokenEnvironmentVariable(apiName, res);",
+					"        }",
+					"    });",
+					"}",
+					"",
+					"// Set token for an API",
+					"function setTokenEnvironmentVariable(apiName, response) {",
+					"    ",
+					"    const TOKEN_NAME = \"bearerToken_\" + apiName;",
+					"    ",
+					"    // Unset the token environment variable first. So if this fails, user would see a blank token instead of a wrong token.",
+					"    pm.environment.unset(TOKEN_NAME);",
+					"    ",
+					"    // Test if we got 200 as response code",
+					"    pm.expect(response.code).to.be.oneOf([200]);",
+					"    ",
+					"    // get the tokenvalue from response body's json",
+					"    const tokenValue = response.json().access_token;",
+					"    ",
+					"    const timeToLive = response.json().expires_in;",
+					"    const tokenExpire = new Date().getTime() / 1000 + timeToLive;",
+					"    ",
+					"    // Test if token is null",
+					"    pm.expect(tokenValue).not.eql(null);",
+					"    ",
+					"    pm.environment.set(TOKEN_NAME, tokenValue);",
+					"    ",
+					"    pm.environment.set(TOKENEXPNAME, tokenExpire);",
+					"    ",
+					"    // Test if token is a long enough string",
+					"    pm.expect(pm.variables.get(TOKEN_NAME)).length.to.be.above(24);",
+					"    ",
+					"    ",
+					"    console.log(\"set \" + TOKEN_NAME + \" to: \" + pm.variables.get(TOKEN_NAME));",
+					"}",
+					"",
+					"// get token expiration time. default to 0",
+					"const tokenExpirationTime = pm.variables.get(TOKENEXPNAME) || 0;",
+					"",
+					"const timeInSecondNow = new Date().getTime() / 1000;",
+					"",
+					"",
+					"if (timeInSecondNow >= tokenExpirationTime) {",
+					"",
+					"    console.log(\"token needs refresh [exp: \" + tokenExpirationTime + \" | now: \" + timeInSecondNow + \"]\");",
+					"    ",
+					"    // IV changed to only have one token for all service. We will store it as configuration",
+					"    ",
+					"    getAndSetApiToken(\"configuration\");",
+					"    ",
+					"    //getAndSetApiToken(\"supplies\");",
+					"    //getAndSetApiToken(\"configuration/shipNodes\");",
+					"    //getAndSetApiToken(\"demands\");",
+					"    //getAndSetApiToken(\"availability/network\");",
+					"    //getAndSetApiToken(\"availability/node\");",
+					"    //getAndSetApiToken(\"configuration/distributionGroups\");",
+					"    //getAndSetApiToken(\"reservations\");",
+					"    //getAndSetApiToken(\"configuration/thresholds\");",
+					"    //getAndSetApiToken(\"configuration/settings\");",
+					"} else {",
+					"    console.log(\"token still valid [exp: \" + tokenExpirationTime + \" | now: \" + timeInSecondNow + \"]\");",
+					"}",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "4a55479e-0e47-4b3a-9cfe-a547ee4c4794",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "4049f411-ab6e-4688-a6bd-f12552be5c02",
+			"key": "tenantID",
+			"value": "us-4474f893",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "084f9d15-42d0-4aff-8662-ac28b5a42c24",
+			"key": "hostname",
+			"value": "api.watsoncommerce.ibm.com",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "4a37863d-17d8-4b03-b416-67fa62e0370a",
+			"key": "client_id",
+			"value": "hgLOcZzqbpXlOtVwoEHr0VVHZfEmJNqb",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "92750814-f72a-4193-ab1b-d6d2ec18c8e1",
+			"key": "client_secret",
+			"value": "JybrMciD3DOunE0oP4dSbyprAjjvmq31",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "43aa19f4-1cf9-485d-893c-d7e2c5ec9399",
+			"key": "applicationName",
+			"value": "inventory",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "800144ed-3ca7-4d0a-8368-5ca7d9a48462",
+			"key": "apiVersion",
+			"value": "v1",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"id": "712a665a-a921-4597-8296-39e5e1aadbab",
+			"key": "tokenUrlPostfix",
+			"value": "oauth2/token",
+			"type": "string",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}
