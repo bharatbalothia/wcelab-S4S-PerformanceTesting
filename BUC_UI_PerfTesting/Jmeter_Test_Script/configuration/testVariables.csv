@@ -1,0 +1,14 @@
+ciHost=commerceinsights.ibmcloud.com
+ciHostPort=443
+ibmHost=www.ibm.com
+ibmHostPort=443
+ibmIdHost=idaas.iam.ibm.com
+ibmIdHostPort=443
+ibmIdAckHost=myibm.ibm.com
+ibmIdAckHostPort=443
+wcHostPort=443
+solrHostPort=3738
+ciPassword=wcs1admin
+wcPassword=wcs1admin
+langId=-1
+tenantFileLoc=E:\jmeter\config\ci\tenantVariables.csv
